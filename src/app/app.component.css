@@ -1,0 +1,14 @@
+.form {
+    background-color:greenyellow;
+    height: 80vh;
+}
+
+.menu {
+    background-color: aliceblue;
+    height: 80vh;;
+}
+
+.header {
+    color: black;
+    background-color: greenyellow;
+}

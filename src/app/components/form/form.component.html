@@ -1,0 +1,21 @@
+<h4>Add new item</h4>
+<form #form1 (ngSubmit)="addFood(form1)">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Food name" class="form-control" ngModel/>
+    </div>
+    <div class="form-group">
+        <input type="text" name="description" placeholder="Description" class="form-control" ngModel/>
+    </div>
+    <div class="form-group">
+        <input type="text" name="ingredients" placeholder="Ingredients" class="form-control" ngModel/>
+    </div>
+    <div class="form-group">
+        <input type="text" name="price" placeholder="Price" class="form-control" ngModel/>
+    </div>
+    <div class="form-group">
+        <input type="file" name="imageUrl" class="form-control" ngModel/>
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit" placeholder="Add Food Item" class="btn btn-dark"/>
+    </div>
+</form>
