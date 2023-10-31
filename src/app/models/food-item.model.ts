@@ -3,31 +3,31 @@ export class FoodItem {
     description: string;
     ingredients: string;
     price: number;
-    imageUrl: string;
+    imageUrl: any;
     rate: number;
 
-    constructor(name: string, description: string, ingredients: string, price:number) {
+    constructor(name: string, description: string, ingredients: string, price:number){
         this.name = name;
         this.description = description;
         this.ingredients = ingredients;
         this.price = price;
-        this.imageUrl = '';
+        //this.imageUrl = '';
         this.rate = 0;
     }
 
-    setImageUrl(url:string):void {
+    setImageUrl(url:any):void{
         this.imageUrl = url;
     }
 
-    getIngredients(): string[] {
+    getIgredients():string[]{
         return this.ingredients.split(',');
     }
 
-    rateIncrease(): void {
+    rateIncrease():void{
         this.rate++;
     }
 
-    rateDecrease(): void {
+    rateDecrease():void{
         this.rate--;
     }
 }

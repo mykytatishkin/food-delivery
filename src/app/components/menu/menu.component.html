@@ -1,2 +1,29 @@
-<h4>Look through our menu</h4>
-<p>menu works!</p>
+<h4>Look through our menu!</h4>
+<div class="row ">
+<div class="row_menu d-flex" style="overflow:scroll;display:flex;flex-wrap:wrap;">
+    <div *ngFor="let item of menu_list" class="card mb-3 w-50" style="min-width: 350px;">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="{{item.imageUrl}}" class="rounded-start w-100" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title" #fname>{{item.name}}</h5>
+              <p class="card-text primary">
+                {{item.description}}
+              </p>
+              <p class="card-text"><small>{{item.ingredients}}</small></p>
+              <p class="text-body-danger"><small>{{item.price}}</small></p>
+              <div class="justify-content-end d-flex">
+                <input type="button" value="Order" (click)="orderFood($event, item.name)" class="btn btn-warning btn-sm">
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row row_order">
+    <h5>Check your order</h5>
+</div>

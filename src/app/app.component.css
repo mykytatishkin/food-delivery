@@ -1,14 +1,15 @@
 .form {
-    background-color:greenyellow;
+    background-color: greenyellow;
     height: 80vh;
 }
 
 .menu {
-    background-color: aliceblue;
-    height: 80vh;;
+    background-color:aliceblue; 
+    height: 80vh;
 }
-
-.header {
+.header{
     color: black;
     background-color: greenyellow;
+    
 }
+
