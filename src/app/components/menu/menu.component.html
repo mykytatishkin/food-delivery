@@ -26,7 +26,7 @@
 </div>
 <div class="row">
   <h5>Check your order</h5>
-  <div #row_order class="row_order">
+  <div class="row_order" #row_order>
     
     <table class="tatbe table-striped w-75">
       <thead>
@@ -42,10 +42,10 @@
           <td>{{item.name}}</td>
           <td>{{item.description}}</td>
           <td>{{item.price}}</td>
-          <td><input type="text" id="item.name" name="count" size="3" [(ngModel)]="item.count" (input)="changeCount($event, item.name)" /></td>
+          <td><input type="number" id="item.name" name="count" size="3" [(ngModel)]="item.count" min="0" (input)="changeCount($event, item.name)" style="width:50px" /></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p>Total cost: {{total}} <input type="button" value="Payment" class="btn btn-dark btn-sm" (click)="payment(row_order)"></p>
+  <p>Total cost: {{total}} <input type="button" value="Payment" class="btn btn-info btn-sm" (click)="payment(row_order)"  /></p>
 </div>
