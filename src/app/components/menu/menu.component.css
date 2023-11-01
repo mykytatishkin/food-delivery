@@ -1,11 +1,11 @@
 
 .row_menu{
-    height:60vh;
+    height:55vh;
     overflow: scroll;
 }
 
-.row-order{
-    height:20vh;
+.row_order{
+    height:15vh;
     background-color:#bd7d1b;
-
+    overflow-y: scroll;
 }

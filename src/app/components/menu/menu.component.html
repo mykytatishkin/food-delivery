@@ -24,6 +24,28 @@
     </div>
 </div>
 </div>
-<div class="row row_order">
-    <h5>Check your order</h5>
+<div class="row">
+  <h5>Check your order</h5>
+  <div class="row_order">
+    
+    <table class="tatbe table-striped w-75">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of order">
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.price}}</td>
+          <td><input type="text" id="item.name" name="count" size="3" [(ngModel)]="item.count" (input)="changeCount($event, item.name)" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Total cost: {{total}}</p>
 </div>
