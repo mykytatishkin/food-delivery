@@ -26,7 +26,7 @@
 </div>
 <div class="row">
   <h5>Check your order</h5>
-  <div class="row_order">
+  <div #row_order class="row_order">
     
     <table class="tatbe table-striped w-75">
       <thead>
@@ -47,5 +47,5 @@
       </tbody>
     </table>
   </div>
-  <p>Total cost: {{total}}</p>
+  <p>Total cost: {{total}} <input type="button" value="Payment" class="btn btn-dark btn-sm" (click)="payment(row_order)"></p>
 </div>

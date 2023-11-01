@@ -15,6 +15,8 @@ export class MenuComponent {
   orderFood(event:any, name:string): void{
     event.target.disabled = true;
     event.target.value = 'selected';
+    event.target.style.backgroundColor = 'maroon';
+    event.target.style.color = 'yellow';
 
     console.log(name);
     for(let i = 0; i < this.menu_list.length; i++){
@@ -44,5 +46,13 @@ export class MenuComponent {
     for(let i = 0; i < this.order.length; i++){
         this.total += this.order[i].count * this.order[i].price;
       }
+  }
+
+  payment(elem: any): void {
+    elem.innerHTML = '';
+    this.total = 0;
+    this.order = [];
+
+    window.location.replace("http://localhost:4200/");
   }
 }
