@@ -4,11 +4,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="form col-lg-4 col-md-4 col-sm-6" >
-      <app-form (emittAddedFood)="getAddedFood($event)"  ></app-form>
+    <div class="">
+      <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+
+      <label class="btn-menu" for="hmt">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+      </label>
+      <app-form (emittAddedFood)="getAddedFood($event)" class="hidden-menu"></app-form>
+
     </div>
-    <div class="menu col-lg-8 col-md-8 col-sm-6" >
-      <app-menu [menu_list]="menu" ></app-menu>
+    <div class="">
+      <app-menu [menu_list]="menu"></app-menu>
     </div>
   </div>
 </div>

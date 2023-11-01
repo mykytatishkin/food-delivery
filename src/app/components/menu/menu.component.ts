@@ -13,10 +13,10 @@ export class MenuComponent {
   total: number = 0;
 
   orderFood(event:any, name:string): void{
-    event.target.disabled = true;
+    //event.target.disabled = true;
     event.target.value = 'selected';
-    event.target.style.backgroundColor = 'maroon';
-    event.target.style.color = 'yellow';
+    event.target.style.backgroundColor="maroon";
+    event.target.style.color="yellow";
 
     console.log(name);
     for(let i = 0; i < this.menu_list.length; i++){
@@ -32,6 +32,9 @@ export class MenuComponent {
   changeCount(event: any, name: string): void{
     var inp = event.target;                       //reference to input element
     var count = event.target.value;               //reference to count in that input element
+    if(count == 0){
+
+    }
     for(let i = 0; i < this.order.length; i++){
       if( this.order[i].name == name){
         this.order[i].count = count;
@@ -48,11 +51,10 @@ export class MenuComponent {
       }
   }
 
-  payment(elem: any): void {
-    elem.innerHTML = '';
-    this.total = 0;
+  payment(elem: any):void{
+    elem.innerHTML='';
+    this.total=0;
     this.order = [];
-
     window.location.replace("http://localhost:4200/");
   }
 }
